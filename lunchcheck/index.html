@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <title>Lunch Check</title>
+  </head>
+  <body ng-app="lunchCheck">
+    <div ng-controller="lunchCheckController">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <h1>Lunch Check</h1>
+          <hr />
+          <label for="inputList" class="form-label"
+            >Please enter a list comma-separated items they usually eat for
+            lunch: {{adverticement}}</label
+          >
+          <input
+            id="inputList"
+            class="form-control"
+            type="text"
+            ng-model="eatLunchList"
+            ng-blur="validateEmptyItems();"
+          />
+          <br />
+          <button class="btn btn-primary" ng-click="evaluate();">Check If Too Much</button>
+          <br />
+          <br />
+          <div class="{{classMsg}}" role="alert">{{message}}</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
