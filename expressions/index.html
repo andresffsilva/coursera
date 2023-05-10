@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="msgApp">
+    <head>
+        <meta charset="utf-8">
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <title>Expressions and Interpolation</title>
+    </head>
+    <body>
+        <div ng-controller="msgController">
+            <h1>{{sayHello();}}</h1>
+            <hr />
+            <p>{{name}} tiene un mensaje:</p>
+            <p>{{sayMessage();}}</p>
+            <div>
+                <button ng-click="setState();">Cambia estado</button>
+                <br />
+                <img ng-src="images/state_{{state}}.png" />
+            </div>
+        </div>
+    </body>
+</html>
